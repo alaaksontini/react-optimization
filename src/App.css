@@ -1,0 +1,225 @@
+/* ── Lesson shell ─────────────────────────────────────────────── */
+
+.lesson {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.lesson-header {
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 32px;
+}
+
+.lesson-header h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+  color: var(--text-h);
+}
+
+.lesson-header p {
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Exercise card ────────────────────────────────────────────── */
+
+.exercise {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.exercise-header {
+  background: var(--code-bg);
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exercise-number {
+  font-size: 0.75rem;
+  font-family: var(--mono);
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.exercise-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--text-h);
+}
+
+.concept-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  align-self: flex-start;
+}
+
+.exercise-description {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.exercise-body {
+  padding: 24px;
+}
+
+/* ── Exercise demo area ───────────────────────────────────────── */
+
+.exercise-demo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls button,
+.controls label {
+  font-size: 0.9rem;
+}
+
+.controls button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--social-bg);
+  color: var(--text-h);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.controls button:hover {
+  box-shadow: var(--shadow);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--text);
+  background: var(--code-bg);
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ── Render badge ─────────────────────────────────────────────── */
+
+.render-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  background: #dc2626;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 8px;
+  align-self: flex-start;
+  user-select: none;
+}
+
+.parent-badge {
+  background: #7c3aed;
+}
+
+/* ── Profile card (exercise 1) ────────────────────────────────── */
+
+.profile-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: flex-start;
+}
+
+.theme-light {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.theme-dark {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+/* ── Number list (exercises 2 & 4) ───────────────────────────── */
+
+.number-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.number-list li {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+/* ── Results panel (exercise 3) ───────────────────────────────── */
+
+.results-panel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: flex-start;
+}
+
+.results-panel button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--social-bg);
+  color: var(--text-h);
+  cursor: pointer;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  transition: box-shadow 0.2s;
+}
+
+.results-panel button:hover {
+  box-shadow: var(--shadow);
+}
+
+/* ── Heavy dashboard (exercise 4) ────────────────────────────── */
+
+.heavy-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
