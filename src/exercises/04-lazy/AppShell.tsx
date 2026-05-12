@@ -1,5 +1,6 @@
-import { Suspense, useState } from 'react'
-import HeavyDashboard from './HeavyDashboard'
+import React, { Suspense, useState } from 'react'
+
+const HeavyDashboard = React.lazy(() => import('./HeavyDashboard'))
 
 // TODO: `HeavyDashboard` est importé de façon statique, ce qui signifie qu'il
 // est inclus dans le bundle et chargé immédiatement même si l'utilisateur n'a

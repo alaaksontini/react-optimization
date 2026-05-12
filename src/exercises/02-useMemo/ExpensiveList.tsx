@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useRenderCount } from '../../hooks/useRenderCount'
 
 function expensiveCalc(n: number): number {
@@ -19,8 +19,10 @@ function ExpensiveList() {
   const [filter, setFilter] = useState('')
   const renders = useRenderCount()
 
-  const numbers = Array.from({ length: 500 }, (_, i) =>
+  const numbers = useMemo(
+    () => Array.from({ length: 500 }, (_, i) =>
     expensiveCalc((i + 1) * multiplier),
+  ), [multiplier]
   )
 
   const visible = numbers.filter(n => String(n).includes(filter))

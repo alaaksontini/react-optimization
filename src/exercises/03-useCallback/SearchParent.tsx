@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { useRenderCount } from '../../hooks/useRenderCount'
 import ResultsPanel from './ResultsPanel'
 
@@ -14,9 +14,12 @@ function SearchParent() {
   const [lastResult, setLastResult] = useState('')
   const renders = useRenderCount()
 
-  const onSearch = (term: string) => {
-    setLastResult(`Results for "${term}"`)
-  }
+  const onSearch = useCallback(
+    (term: string) => {
+      setLastResult(`Results for "${term}"`)
+    },
+    [],
+  )
 
   return (
     <div className="exercise-demo">

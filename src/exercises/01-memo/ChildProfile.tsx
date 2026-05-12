@@ -1,3 +1,4 @@
+import React from 'react'
 import { useRenderCount } from '../../hooks/useRenderCount'
 
 interface ChildProfileProps {
@@ -20,4 +21,4 @@ function ChildProfile({ theme }: ChildProfileProps) {
   )
 }
 
-export default ChildProfile
+export default React.memo(ChildProfile)
